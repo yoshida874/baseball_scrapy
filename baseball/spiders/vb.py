@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-from baseball.items import BatterItem;
+from baseball.items import VbItem;
 
 class BatterSpider(scrapy.Spider):
     name = 'DeNA'
@@ -13,7 +13,7 @@ class BatterSpider(scrapy.Spider):
        #//＝ノードの省略 @=クラス要素の指定
        for tr in response.xpath('//*[@id="tedivmaintbl"]/div[4]/table').xpath('tr'):
             
-            item = BatterItem()
+            item = VbItem()
             
             item['number'] = tr.xpath('td[1]/text()').extract_first()
             #if文で値がnullかを判断する

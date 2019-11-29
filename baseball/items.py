@@ -9,7 +9,7 @@ import scrapy
 
 from scrapy import Item, Field
 
-class BatterItem(Item):
+class VbItem(Item):
     name = Field()      # 名前
     bat = Field()       # 右打ち or 左打ち or 両打ち
     pit = Field()       #右投げ or 左投げ
@@ -17,3 +17,8 @@ class BatterItem(Item):
     day = Field()       #誕生日
     height = Field()    #身長
     weight = Field()    #体重
+
+class BatterItem(Item):
+    name = Field()      # 名前
+    AVG = Field()       #打率
+    bat = Field()       #打席数
