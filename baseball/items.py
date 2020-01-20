@@ -20,5 +20,9 @@ class VbItem(Item):
 
 class BatterItem(Item):
     name = Field()      # 名前
+    team = Field()      #チーム
     AVG = Field()       #打率
-    bat = Field()       #打席数
+    game = Field()
+    #bat = Field()       #打席数
+    long_hit = Field()  #長打率
+    spawn = Field()     #出塁率
